@@ -1,29 +1,23 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+import { getMahasiswas } from "./firebase.js";
 
-// Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
-document.addEventListener('deviceready', onDeviceReady, false);
+// Get element
+const mahasiswa_list = document.querySelector("#mahasiswa_list");
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
+// Get mahasiswas
+const mahasiswas = await getMahasiswas();
 
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
-}
+// Show mahasiswas
+mahasiswas.forEach((mahasiswa) => {
+  const item = document.createElement("div");
+  item.innerHTML = `
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title
+            ">${mahasiswa.nama}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${mahasiswa.nim}</h6>
+            <p class="card-text">${mahasiswa.angkatan}</p>
+        </div>
+        </div>
+    `;
+  mahasiswa_list.appendChild(item);
+});
