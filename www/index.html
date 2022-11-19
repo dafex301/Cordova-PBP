@@ -20,27 +20,20 @@
     <title>Mahasiswa</title>
     <script>
       const input_page = () => {
-        window.location = "/form.html";
+        window.location = "/www/form.html";
       };
     </script>
   </head>
   <body class="bg-slate-50">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6 m-2"
+    <p class="text-center font-bold mt-6 mb-2 text-2xl">DATA MAHASISWA MALAS</p>
+    <button
+      class="bg-blue-500 active:bg-blue-700 text-white font-bold py-1 px-5 ml-9 mt-3 rounded-md shadow-md"
       onclick="input_page()"
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-      />
-    </svg>
+      <i class="fas fa-plus"></i>
+    </button>
     <div id="mahasiswa_list"></div>
+
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
