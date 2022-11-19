@@ -9,6 +9,7 @@ import {
   getFirestore,
   collection,
   getDocs,
+  getDoc,
   addDoc,
   doc,
   updateDoc,
@@ -45,6 +46,17 @@ export const getMahasiswas = async () => {
     mahasiswas.push({ ...doc.data(), id: doc.id });
   });
   return mahasiswas;
+};
+
+// Get mahasiswa by id
+export const getMahasiswa = async (id) => {
+  const docRef = doc(db, "mahasiswas", id);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    return docSnap.data();
+  } else {
+    console.log("No such document!");
+  }
 };
 
 // Add mahasiswa

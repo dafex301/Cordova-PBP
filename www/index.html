@@ -4,16 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/10677b95e2.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Mahasiswa</title>
     <script>
       const input_page = () => {
-        window.location = "/form.html";
+        window.location = "/www/form.html";
       };
     </script>
   </head>
-  <body>
-    <button onclick="input_page()">Input Mahasiswa</button>
+  <body class="bg-slate-50">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6 m-2"
+      onclick="input_page()"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+      />
+    </svg>
     <div id="mahasiswa_list"></div>
     <script type="module" src="./js/index.js"></script>
   </body>
