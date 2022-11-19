@@ -42,6 +42,18 @@ To check your current set of platforms:
 cordova platform ls
 ```
 
+Run the following command to run the project on the browser:
+
+```
+cordova run browser
+```
+
+Run the following command to run the project on the android:
+
+```
+cordova run android
+```
+
 Run the following command to build the project for all platforms:
 
 ```
