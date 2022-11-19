@@ -9,7 +9,7 @@
 
 ## About <a name = "about"></a>
 
-Projects created to fulfill platform-based programming lecture assignments. Create a multiplatform program using Cordova. Use Tailwind for styling and Firebase for Back-end.
+Projects created to fulfill platform-based programming lecture assignments. Create a multiplatform application using Cordova. Use Tailwind for styling and Firebase for Back-end.
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -17,30 +17,37 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+Download and install Node.js. On installation you should be able to invoke node and npm on your command line.
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+Install the cordova module using npm utility of Node.js. The cordova module will automatically be downloaded by the npm utility.
 
 ```
-Give the example
+npm install -g cordova
 ```
 
-And repeat
+Add the platforms that you want to target your app. We will add the 'ios' and 'android' platform and ensure they get saved to config.xml and package.json:
 
 ```
-until finished
+cordova platform add android
+cordova platform add browser
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+To check your current set of platforms:
+
+```
+cordova platform ls
+```
+
+Run the following command to build the project for all platforms:
+
+```
+cordova build
+```
 
 ## Usage <a name = "usage"></a>
 
-Add notes about how to use the system.
+Kerjaan Rifan ntar
