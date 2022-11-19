@@ -1,4 +1,4 @@
-import { getMahasiswa, updateMahasiswa } from "./firebase.js";
+import { getMahasiswa, updateMahasiswa, serverTimeStamp } from "./firebase.js";
 
 // get mahasiswa id from url
 const id = window.location.search.split("=")[1];
@@ -21,6 +21,7 @@ form.addEventListener("submit", async (e) => {
     nama: nama.value,
     nim: nim.value,
     angkatan: angkatan.value,
+    updatedAt: serverTimeStamp(),
   };
   // update mahasiswa
   await updateMahasiswa(id, mahasiswa);

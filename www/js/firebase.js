@@ -14,6 +14,9 @@ import {
   doc,
   updateDoc,
   deleteDoc,
+  serverTimestamp,
+  query,
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
@@ -48,6 +51,17 @@ export const getMahasiswas = async () => {
   return mahasiswas;
 };
 
+// Get all mahasiswas ordey by createdAt
+const q = query(usersCollection, orderBy("createdAt", "desc"));
+export const getMahasiswasOrderByCreatedAt = async () => {
+  let mahasiswas = [];
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    mahasiswas.push({ ...doc.data(), id: doc.id });
+  });
+  return mahasiswas;
+};
+
 // Get mahasiswa by id
 export const getMahasiswa = async (id) => {
   const docRef = doc(db, "mahasiswas", id);
@@ -76,3 +90,5 @@ export const updateMahasiswa = async (id, mahasiswa) => {
   const docRef = doc(db, "mahasiswas", id);
   await updateDoc(docRef, mahasiswa);
 };
+
+export const serverTimeStamp = serverTimestamp;

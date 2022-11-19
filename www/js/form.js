@@ -1,4 +1,4 @@
-import { getMahasiswas, addMahasiswa } from "./firebase.js";
+import { getMahasiswas, addMahasiswa, serverTimeStamp } from "./firebase.js";
 
 // Get element
 const form = document.querySelector("#form");
@@ -15,6 +15,8 @@ form.addEventListener("submit", async (e) => {
     nama: nama.value,
     nim: nim.value,
     angkatan: angkatan.value,
+    createdAt: serverTimeStamp(),
+    updatedAt: serverTimeStamp(),
   };
 
   // Add mahasiswa to firestore
