@@ -4,7 +4,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import {
   getFirestore,
   collection,
@@ -96,8 +96,6 @@ export const createUser = async (email, password) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      // consolo log
-      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -111,12 +109,27 @@ export const signInUser = async (email, password) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      // consolo log
+
+      console.log('user :>> ', user);
+
+      //redirect
+      window.location.href = "index.html";
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+
+      console.log('errorMessage :>> ', errorMessage);
     });
+}
+
+export const signOutUser = async () => {
+  await signOut(auth).then(() => {
+    // Sign-out successful.
+    window.location.href = "login.html";
+  }).catch((error) => {
+    // An error happened.
+  });
 }
 
 
