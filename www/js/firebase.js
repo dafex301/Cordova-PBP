@@ -4,7 +4,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import {
   getFirestore,
   collection,
@@ -90,5 +90,22 @@ export const updateMahasiswa = async (id, mahasiswa) => {
   const docRef = doc(db, "mahasiswas", id);
   await updateDoc(docRef, mahasiswa);
 };
+
+export const createUser = async (email, password) => {
+  await createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
+}
+  
+
+
 
 export const serverTimeStamp = serverTimestamp;

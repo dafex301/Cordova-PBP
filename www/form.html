@@ -1,87 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="/dist/output.css" rel="stylesheet" /> -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="./css/output.css" rel="stylesheet" />
-    <title>Form</title>
-  </head>
-  <body class="bg-slate-50">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6 text-gray-500 ml-3 mt-3"
-      onclick="window.location = '/www/index.html'"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-      />
-    </svg>
-    <div
-      class="w-5/6 mx-6 mb-6 mt-3 mx-auto bg-white rounded-2xl p-4 shadow-md"
-    >
-      <img class="rounded-lg" src="./img/student.jpg" alt="" />
-      <h1 class="text-2xl font-semibold text-center tracking-wide">
-        Data Mahasiswa
-      </h1>
-      <h3 class="text-center text-sm text-gray-500 mb-2">
-        Masukkan data di bawah ini.
-      </h3>
-      <form class="" id="form" method="post">
-        <div class="mb-6">
-          <label for="nama" class="block mb-2 text-sm font-medium text-gray-900"
-            >Nama</label
-          >
-          <input
-            name="nama"
-            type="text"
-            id="nama"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Nama"
-            required
-          />
-        </div>
-        <div class="mb-6">
-          <label for="nim" class="block mb-2 text-sm font-medium text-gray-900"
-            >NIM</label
-          >
-          <input
-            name="nim"
-            type="number"
-            id="nim"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
-            placeholder="NIM"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="nim" class="block mb-2 text-sm font-medium text-gray-900"
-            >Angkatan</label
-          >
-          <input
-            name="angkatan"
-            type="number"
-            id="angkatan"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
-            placeholder="Angkatan"
-          />
-        </div>
-        <button
-          type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
-    <script type="module" src="./js/form.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link href="/dist/output.css" rel="stylesheet" /> -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="./css/output.css" rel="stylesheet" />
+  <title>Form</title>
+</head>
+
+<body class="bg-slate-50">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    class="w-6 h-6 text-gray-500 ml-3 mt-3" onclick="window.location = '/www/index.html'">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+  </svg>
+  <div class="w-5/6 mx-6 mb-6 mt-3 mx-auto bg-white rounded-2xl p-4 shadow-md">
+    <img class="rounded-lg" src="./img/student.jpg" alt="" />
+    <h1 class="text-2xl font-semibold text-center tracking-wide">
+      Data Mahasiswa
+    </h1>
+    <h3 class="text-center text-sm text-gray-500 mb-2">
+      Masukkan data di bawah ini.
+    </h3>
+    <form class="" id="form" method="post">
+      <div class="mb-6">
+        <label for="nama" class="block mb-2 text-sm font-medium text-gray-900">Nama</label>
+        <input name="nama" type="text" id="nama"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Nama" required />
+      </div>
+      <div class="mb-6">
+        <label for="nim" class="block mb-2 text-sm font-medium text-gray-900">NIM</label>
+        <input name="nim" type="number" id="nim"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required placeholder="NIM" />
+      </div>
+      <div class="mb-6">
+        <label for="nim" class="block mb-2 text-sm font-medium text-gray-900">Angkatan</label>
+        <input name="angkatan" type="number" id="angkatan"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required placeholder="Angkatan" />
+      </div>
+      <button type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+        Submit
+      </button>
+    </form>
+  </div>
+  <script type="module" src="./js/form.js"></script>
+</body>
+
 </html>
