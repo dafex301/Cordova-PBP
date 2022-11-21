@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- <link href="./css/output.css" rel="stylesheet" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/10677b95e2.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/10677b95e2.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Login</title>
-</head>
+  </head>
 
-<body>
-    <div class=" h-screen bg-gradient-to-br from-[#1C84E5] to-[#8C29F6] pt-12">
-        <div class="w-5/6 mx-auto mb-6 bg-white rounded-2xl p-4 shadow-md">
-            <img class="rounded-lg" src="./img/auth.png" alt="" />
-            <h1 class="text-2xl font-semibold text-center tracking-wide">
-                Login
-            </h1>
-            <h3 class="text-center text-sm text-gray-500 mb-2">
-                Silahkan Login
-            </h3>
-            <form class="" id="form">
-                <div class="mb-6">
-                    <label for="email" class="block mb-2 ml-2 text-sm font-medium text-gray-900">Email</label>
-                    <input name="email" type="email" id="email"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                        required />
-                </div>
-                <div class="mb-6">
-                    <label for="password" class="block mb-2 ml-2 text-sm font-medium text-gray-900">Password</label>
-                    <input name="password" type="password" id="password"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                        required />
-                </div>
-                <button type="submit"
-                    class="text-white bg-gradient-to-r from-[#1C84E5] to-[#8C29F6]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-                    Login
-                </button>
-            </form>
-        </div>
+  <body>
+    <div class="h-screen bg-gradient-to-br from-[#1C84E5] to-[#8C29F6] pt-12">
+      <div class="w-5/6 mx-auto mb-6 bg-white rounded-2xl p-4 shadow-md">
+        <img class="rounded-lg" src="./img/auth.png" alt="" />
+        <h1 class="text-2xl font-semibold text-center tracking-wide">Login</h1>
+        <h3 class="text-center text-sm text-gray-500 mb-2">Silahkan Login</h3>
+        <form class="" id="form">
+          <div class="mb-6">
+            <label
+              for="email"
+              class="block mb-2 ml-2 text-sm font-medium text-gray-900"
+              >Email</label
+            >
+            <input
+              name="email"
+              type="email"
+              id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="password"
+              class="block mb-2 ml-2 text-sm font-medium text-gray-900"
+              >Password</label
+            >
+            <input
+              name="password"
+              type="password"
+              id="password"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="text-white bg-gradient-to-r from-[#1C84E5] to-[#8C29F6] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          >
+            Login
+          </button>
+        </form>
+      </div>
     </div>
 
     <script type="module" src="./js/login.js"></script>
-
-
-</body>
-
+  </body>
 </html>
